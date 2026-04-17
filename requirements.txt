@@ -1,0 +1,2 @@
+# No third-party packages — relay uses Python stdlib only.
+# This file must exist so Render's default `pip install -r requirements.txt` succeeds.
