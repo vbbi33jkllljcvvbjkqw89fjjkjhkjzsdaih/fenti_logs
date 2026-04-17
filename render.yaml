@@ -1,0 +1,17 @@
+# Optional: deploy on Render. Primary Railway config is `railway.toml` + `Procfile`.
+services:
+  - type: web
+    name: fenti-corpse-relay
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: python corpse_log_relay.py
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: DISCORD_BOT_TOKEN
+        sync: false
+      - key: DISCORD_CHANNEL_ID
+        sync: false
+      - key: RELAY_SHARED_SECRET
+        sync: false
